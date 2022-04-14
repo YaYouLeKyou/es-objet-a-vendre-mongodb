@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Thing = require('./models/thing');
 const bodyParser = require('body-parser')
 
-mongoose.connect('mongodb+srv://yanes:Nomade75@cluster0.fqyz4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect(process.env.DB,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
